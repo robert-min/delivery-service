@@ -30,25 +30,25 @@ public class Result {
 
     public static Result ERROR(ErrorCodeIfs errorCodeIfs) {
         return Result.builder()
-                .resultCode(ErrorCode.OK.getErrorCode())
-                .resultMessage(ErrorCode.OK.getDescription())
-                .resultDescription("실패")
+                .resultCode(errorCodeIfs.getErrorCode())
+                .resultMessage(errorCodeIfs.getDescription())
+                .resultDescription("에러 발생")
                 .build();
     }
 
 
     public static Result ERROR(ErrorCodeIfs errorCodeIfs, Throwable tx) {
         return Result.builder()
-                .resultCode(ErrorCode.OK.getErrorCode())
-                .resultMessage(ErrorCode.OK.getDescription())
+                .resultCode(errorCodeIfs.getErrorCode())
+                .resultMessage(errorCodeIfs.getDescription())
                 .resultDescription(tx.getLocalizedMessage())
                 .build();
     }
 
     public static Result ERROR(ErrorCodeIfs errorCodeIfs, String description) {
         return Result.builder()
-                .resultCode(ErrorCode.OK.getErrorCode())
-                .resultMessage(ErrorCode.OK.getDescription())
+                .resultCode(errorCodeIfs.getErrorCode())
+                .resultMessage(errorCodeIfs.getDescription())
                 .resultDescription(description)
                 .build();
     }
