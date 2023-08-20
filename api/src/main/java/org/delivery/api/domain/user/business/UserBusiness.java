@@ -10,6 +10,7 @@ import org.delivery.api.domain.user.controller.model.UserLoginRequest;
 import org.delivery.api.domain.user.controller.model.UserRegisterRequest;
 import org.delivery.api.domain.user.controller.model.UserResponse;
 import org.delivery.api.domain.user.converter.UserConverter;
+import org.delivery.api.domain.user.model.User;
 import org.delivery.api.domain.user.service.UserService;
 import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.context.request.RequestContextHolder;
@@ -60,11 +61,9 @@ public class UserBusiness {
         return tokenResponse;
     }
 
-    public UserResponse me() {
-        var requestContext = Objects.requireNonNull(RequestContextHolder.getRequestAttributes());
-        var userId = requestContext.getAttribute("userId", RequestAttributes.SCOPE_REQUEST);
+    public UserResponse me(User user) {
 
-        var userEntity = userService.getUserWithThrow(Long.parseLong(userId.toString()));
+        var userEntity = userService.getUserWithThrow(user.getId());
         var response = userConverter.toResponse(userEntity);
         return response;
     }
