@@ -4,6 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.delivery.api.common.annotation.Business;
 import org.delivery.api.common.error.ErrorCode;
 import org.delivery.api.common.exception.ApiException;
+import org.delivery.api.domain.user.controller.model.UserLoginRequest;
 import org.delivery.api.domain.user.controller.model.UserRegisterRequest;
 import org.delivery.api.domain.user.controller.model.UserResponse;
 import org.delivery.api.domain.user.converter.UserConverter;
@@ -37,5 +38,20 @@ public class UserBusiness {
                 .map(userConverter::toResponse)
                 .orElseThrow(() -> new ApiException(ErrorCode.NULL_POINT, "request null"));*/
 
+    }
+
+    /*
+    * 사용자 로그인 처리
+    * 1. email, password 사용자 체크
+    * 2. user entity 로그인 확인
+    * 3. token 생성
+    * 4. token response
+    * */
+    public UserResponse login(UserLoginRequest request) {
+        var userEntity = userService.login(request.getEmail(), request.getPassword());
+
+        // TODO : token 생성
+
+        return userConverter.toResponse(userEntity);
     }
 }

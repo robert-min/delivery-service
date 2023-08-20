@@ -7,7 +7,7 @@ import org.springframework.http.HttpStatus;
 @AllArgsConstructor
 @Getter
 public enum UserErrorCode implements ErrorCodeIfs{
-    USER_NOT_FOUND(HttpStatus.BAD_REQUEST.value(), 400, "Wrong request")
+    USER_NOT_FOUND(HttpStatus.BAD_REQUEST.value(), 400, "사용자를 찾을 수 없음.")
     ;
 
     private final Integer httpStatusCode;
