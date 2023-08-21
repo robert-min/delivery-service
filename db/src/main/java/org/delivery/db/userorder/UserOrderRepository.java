@@ -19,4 +19,5 @@ public interface UserOrderRepository extends JpaRepository<UserOrderEntity, Long
     // select * from user_order where user_did =? and status =? and user_id = ?
     Optional<UserOrderEntity> findAllByIdAndStatusAndUserId(Long id, UserOrderStatus status, Long userId);
 
+    Optional<UserOrderEntity> findAllByIdAndUserId(Long id, Long userId);
 }
