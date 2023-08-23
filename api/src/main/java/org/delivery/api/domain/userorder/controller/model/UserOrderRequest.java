@@ -12,6 +12,9 @@ import java.util.List;
 @NoArgsConstructor
 public class UserOrderRequest {
 
+    @NotNull
+    private Long storeId;
+
     // 주문
     @NotNull
     private List<Long> storeMenuIdList;

@@ -7,11 +7,28 @@
 <body>
  <h1>MAIN PAGE</h1>
 
- <h1 th:text="${#authentication.name}"></h1> </br>
+<!-- <h1 th:text="${#authentication.name}"></h1> </br>
  <h1 th:text="${#authentication.principal.storeName}"></h1> </br>
  <h1 th:text="${#authentication.principal.role}"></h1> </br>
 
- <h1 th:text="${#authentication}"></h1> </br>
+ <h1 th:text="${#authentication}"></h1> </br>-->
 
 </body>
+
+<script>
+    const url = "http://localhost:8081/api/sse/connect";    // url address
+    const eventSource = new EventSource(url);   // sse connect
+
+    eventSource.onopen = event => {
+        console.log("see connection : ");
+        console.log(event)
+    }
+
+    eventSource.onmessage = event => {
+        console.log("receive data : " + event.data);
+    }
+
+
+</script>
+
 </html>

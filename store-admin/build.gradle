@@ -20,6 +20,11 @@ repositories {
 
 dependencies {
     implementation project(':db')
+    implementation project(':common')
+
+    // rabbitmq
+    implementation 'org.springframework.boot:spring-boot-starter-amqp'
+
     // thymeleaf
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 
