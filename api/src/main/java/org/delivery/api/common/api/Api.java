@@ -1,4 +1,5 @@
-package org.delivery.api.common.api;
+/*
+package org.delivery.common.api;
 
 import lombok.Data;
 import lombok.AllArgsConstructor;
@@ -48,3 +49,4 @@ public class Api<T> {
         return api;
     }
 }
+*/
