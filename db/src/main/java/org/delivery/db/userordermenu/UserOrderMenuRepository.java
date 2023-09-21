@@ -1,3 +1,4 @@
+/*
 package org.delivery.db.userordermenu;
 
 import org.delivery.db.userordermenu.enums.UserOrderMenuStatus;
@@ -13,3 +14,4 @@ public interface UserOrderMenuRepository extends JpaRepository<UserOrderMenuEnti
 
 
 }
+*/

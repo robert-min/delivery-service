@@ -1,3 +1,4 @@
+/*
 package org.delivery.db.user;
 
 import org.delivery.db.user.enums.UserStatus;
@@ -13,3 +14,4 @@ public interface UserRepository extends JpaRepository<UserEntity, Long> {
     // SELECT * FROM user WHERE email = ? and password = ? and status =? order by id desc limit 1
     Optional<UserEntity> findFirstByEmailAndPasswordAndStatusOrderByIdDesc(String email, String password, UserStatus status);
 }
+*/
