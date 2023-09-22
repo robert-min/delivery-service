@@ -50,4 +50,5 @@ public class StoreEntity extends BaseEntity {
     @Column(length = 200)
     private String phoneNumber;
 
+
 }
