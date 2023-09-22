@@ -1,9 +1,10 @@
-package org.delivery.api.common.api;
+/*
+package org.delivery.common.api;
 
 import lombok.Data;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
-import org.delivery.api.common.error.ErrorCodeIfs;
+import org.delivery.common.error.ErrorCodeIfs;
 
 import javax.validation.Valid;
 
@@ -48,3 +49,4 @@ public class Api<T> {
         return api;
     }
 }
+*/

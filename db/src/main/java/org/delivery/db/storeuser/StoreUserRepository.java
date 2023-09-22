@@ -1,3 +1,4 @@
+/*
 package org.delivery.db.storeuser;
 
 import org.delivery.db.storeuser.enums.StoreUserStatus;
@@ -12,3 +13,4 @@ public interface StoreUserRepository extends JpaRepository<StoreUserEntity, Long
 
 
 }
+*/

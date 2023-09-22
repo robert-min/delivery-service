@@ -9,6 +9,8 @@ import org.delivery.storeadmin.domain.user.converter.StoreUserConverter;
 import org.delivery.storeadmin.domain.user.service.StoreUserService;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 @RequiredArgsConstructor
 public class StoreUserBusiness {
@@ -20,7 +22,7 @@ public class StoreUserBusiness {
     public StoreUserResponse register(
             StoreUserRegisterRequest request
     ) {
-        var storeEntity = storeRepository.findFirstByNameAndStatusOrderByIdDesc(request.getStoreName(), StoreStatus.REGISTERED);
+        var storeEntity = Optional.ofNullable(storeRepository.findFirstByNameAndStatusOrderByIdDesc(request.getStoreName(), StoreStatus.REGISTERED));
 
         var entity = storeUserConverter.toEntity(request, storeEntity.get()); // TODO : NULL 일 때 에러 체크 필요
 

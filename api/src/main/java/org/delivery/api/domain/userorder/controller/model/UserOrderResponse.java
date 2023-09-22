@@ -1,3 +1,4 @@
+/*
 package org.delivery.api.domain.userorder.controller.model;
 
 import lombok.AllArgsConstructor;
@@ -31,4 +32,4 @@ public class UserOrderResponse {
 
     private LocalDateTime receivedAt;
 
-}
+}*/

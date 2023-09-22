@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 * Token은  2000번대 에러
 * */
 
+/*
 
 @AllArgsConstructor
 @Getter
@@ -24,3 +25,4 @@ public enum TokenErrorCode implements ErrorCodeIfs{
 
     private final String description;
 }
+*/
